@@ -1,6 +1,6 @@
 import { gql } from '@apollo/client';
 
-export const getPeopleData = gql`
+const getPeopleData = gql`
 query{allPeople{
     people{
       id
@@ -8,13 +8,6 @@ query{allPeople{
       species{name}
       homeworld{name}
       birthYear
-       __typename
-      eyeColor
-      hairColor
-      skinColor
-      vehicleConnection{
-        vehicles{name}
-      }   
     }
   }}
 `;
