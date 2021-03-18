@@ -1,3 +1,4 @@
+/* eslint-disable react/no-array-index-key */
 /* eslint-disable react/prop-types */
 import React from 'react';
 import {
@@ -9,14 +10,16 @@ import {
 } from './style';
 // import { useParams } from '@reach/router';
 import getDetail from '../../hoc/getDetail';
+import Loading from '../Loading/index';
+import Failed from '../Failed/index';
 
 const Detail = ({ id }) => {
   console.log(id);
   const { loading, error, data } = useQuery(getDetail, {
     variables: { id },
   });
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Loading />;
+  if (error) return <Failed />;
   const { person } = data;
   console.log(person);
   return (
@@ -48,8 +51,8 @@ const Detail = ({ id }) => {
       </InfoCell>
       <Subtitle>Vehicles</Subtitle>
       <div>
-        {person.vehicleConnection.vehicles.map((vehicle) => (
-          <InfoCell>
+        {person.vehicleConnection.vehicles.map((vehicle, i) => (
+          <InfoCell key={i}>
             <LowEmphasis>{vehicle.name}</LowEmphasis>
           </InfoCell>
 

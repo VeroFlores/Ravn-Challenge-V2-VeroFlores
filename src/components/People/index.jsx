@@ -4,14 +4,16 @@ import {
 } from '@apollo/client';
 import { FaAngleRight } from 'react-icons/fa';
 import getPeopleData from '../../hoc/getPeople';
+import Loading from '../Loading/index';
+import Failed from '../Failed/index';
 import {
   Header, TextBox, Item, PersonTitle, LowEmphasis, Link,
 } from './style';
 
 const People = () => {
   const { loading, error, data } = useQuery(getPeopleData);
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>Error :(</p>;
+  if (loading) return <Loading />;
+  if (error) return <Failed />;
   return (
     <section>
       <Header>People of Stars Wars</Header>

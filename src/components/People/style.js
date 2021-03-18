@@ -7,7 +7,6 @@ padding:25px 0px;
 color:white;
 background-color:#000000;
 `;
-
 export const TextBox = styled.div`
 padding:1rem;
 `;

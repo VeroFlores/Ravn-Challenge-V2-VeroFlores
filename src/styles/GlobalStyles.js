@@ -4,6 +4,8 @@ const GlobalStyles = createGlobalStyle`
 html {
                 box-sizing: border-box;
                 font-family: SF Pro Display;
+                font-size:17px;
+                font-style: normal;
         }
         
         *, *::before, *::after {
