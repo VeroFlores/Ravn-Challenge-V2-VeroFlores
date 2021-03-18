@@ -48,7 +48,7 @@ letter-spacing: 0.0125em;
 `;
 export const InfoCell = styled.div`
     display: grid;
-    grid-template-columns: 70% 30%;
+    grid-template-columns: 83% 17%;
 padding:1rem;
 border-bottom:1px solid rgba(0,0,0,0.1);
 `;
