@@ -3,6 +3,10 @@ import React from 'react';
 import {
   useQuery,
 } from '@apollo/client';
+import { FaArrowLeft } from 'react-icons/fa';
+import {
+  Header, Link, Subtitle, InfoCell, LowEmphasis, DetailText,
+} from './style';
 // import { useParams } from '@reach/router';
 import getDetail from '../../hoc/getDetail';
 
@@ -14,31 +18,42 @@ const Detail = ({ id }) => {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error :(</p>;
   const { person } = data;
+  console.log(person);
   return (
     <section>
-      <div>
+      <Header>
+        <Link to="/"><FaArrowLeft /></Link>
         <h1>{person.name}</h1>
-      </div>
-      <h3>General information</h3>
+      </Header>
+      <Subtitle>General information</Subtitle>
+      <InfoCell>
+        <LowEmphasis>Eye Color</LowEmphasis>
+        <DetailText>{person.hairColor}</DetailText>
+      </InfoCell>
+      <InfoCell>
+        <LowEmphasis>Hair Color </LowEmphasis>
+        <DetailText>{person.hairColor}</DetailText>
+      </InfoCell>
+      <InfoCell>
+        <LowEmphasis>Skin Color </LowEmphasis>
+        <DetailText>{person.hairColor}</DetailText>
+      </InfoCell>
+      <InfoCell>
+        <LowEmphasis>Hair Color </LowEmphasis>
+        <DetailText>{person.skinColor}</DetailText>
+      </InfoCell>
+      <InfoCell>
+        <LowEmphasis>Birth Year </LowEmphasis>
+        <DetailText>{person.birthYear}</DetailText>
+      </InfoCell>
+      <Subtitle>Vehicles</Subtitle>
       <div>
-        <p>Eye Color</p>
-        <p>{person.hairColor}</p>
-      </div>
-      <div>
-        <p>Hair Color </p>
-        <p>{person.hairColor}</p>
-      </div>
-      <div>
-        <p>Skin Color </p>
-        <p>{person.hairColor}</p>
-      </div>
-      <div>
-        <p>Hair Color </p>
-        <p>{person.skinColor}</p>
-      </div>
-      <div>
-        <p>Birth Year </p>
-        <p>{person.birthYear}</p>
+        {person.vehicleConnection.vehicles.map((vehicle) => (
+          <InfoCell>
+            <LowEmphasis>{vehicle.name}</LowEmphasis>
+          </InfoCell>
+
+        ))}
       </div>
     </section>
   );
