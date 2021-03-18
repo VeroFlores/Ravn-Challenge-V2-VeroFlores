@@ -1,8 +1,8 @@
 import React from 'react';
 import { Router } from '@reach/router';
 import GlobalStyles from './styles/GlobalStyles';
-import People from './components/People/index';
-import Detail from './components/Detail/index';
+import People from './pages/People/index';
+import Detail from './pages/Detail/index';
 
 const App = () => {
   console.log('app');

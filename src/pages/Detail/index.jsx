@@ -10,8 +10,8 @@ import {
 } from './style';
 // import { useParams } from '@reach/router';
 import getDetail from '../../hoc/getDetail';
-import Loading from '../Loading/index';
-import Failed from '../Failed/index';
+import Loading from '../../components/Loading/index';
+import Failed from '../../components/Failed/index';
 
 const Detail = ({ id }) => {
   console.log(id);

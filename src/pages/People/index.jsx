@@ -4,8 +4,8 @@ import {
 } from '@apollo/client';
 import { FaAngleRight } from 'react-icons/fa';
 import getPeopleData from '../../hoc/getPeople';
-import Loading from '../Loading/index';
-import Failed from '../Failed/index';
+import Loading from '../../components/Loading/index';
+import Failed from '../../components/Failed/index';
 import {
   Header, TextBox, Item, PersonTitle, LowEmphasis, Link,
 } from './style';
