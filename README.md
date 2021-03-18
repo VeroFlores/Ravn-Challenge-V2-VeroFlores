@@ -3,9 +3,9 @@
 ## 1. Descripción del Proyecto
 
 This app allows to browse the Star Wars GraphQL Api.
+[Visita el proyecto](https://ravn-challenge-v2-vero-flores-veroflores.vercel.app/)
 
 ![PRODUCT](https://user-images.githubusercontent.com/68167686/111703308-768e7f00-880b-11eb-8479-14e5df5b3d1f.png)
-[visita el proyecto](https://ravn-challenge-v2-vero-flores-veroflores.vercel.app/)
 
 ## 2. Tecnologías Usadas
 
