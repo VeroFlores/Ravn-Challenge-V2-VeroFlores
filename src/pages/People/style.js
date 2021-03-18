@@ -29,7 +29,7 @@ color:#828282;
 `;
 export const Item = styled.li`
     display: grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 85% 15%;
     align-items: center;
     border-bottom:1px solid rgba(0,0,0,0.1);
 `;

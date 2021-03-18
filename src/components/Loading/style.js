@@ -5,6 +5,7 @@ display:flex;
 flex-direction:row;
 justify-content: center;
 color:#828282;
+padding:1rem;
 `;
 export const Header = styled.h1`
     text-align: center;

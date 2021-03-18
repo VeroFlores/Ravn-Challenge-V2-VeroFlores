@@ -14,14 +14,12 @@ import Loading from '../../components/Loading/index';
 import Failed from '../../components/Failed/index';
 
 const Detail = ({ id }) => {
-  console.log(id);
   const { loading, error, data } = useQuery(getDetail, {
     variables: { id },
   });
   if (loading) return <Loading />;
   if (error) return <Failed />;
   const { person } = data;
-  console.log(person);
   return (
     <section>
       <Header>
